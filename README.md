@@ -7,9 +7,17 @@ MyRecon is a Bash.
 ## Installation
 
 
-
 ```bash
-pip install foobar
+git clone https://github.com/mouftan/MyRecon.git
+```
+```bash
+cd MyReco
+```
+```bash
+sudo chmod u+x install.sh
+```
+```bash
+./install.sh
 ```
 
 ## Usage
