@@ -2,7 +2,7 @@
 
 # Foobar
 
-MyRecon is a Bash.
+MyRecon is a Bash script for Subdomain Enumeration.
 
 ## Installation
 
