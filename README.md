@@ -23,16 +23,13 @@ sudo chmod u+x install.sh
 ## Usage
 
 ```python
-import foobar
+Usage: ./MyRecon.sh [options]
 
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+Options:
+  -h, --help              Display help information
+  -d, --domain <domain>   Single domain
+  -f, --file <filename>   File containing multiple domains
+  -o, --output <folder>   Specify output folder for scan results (default: ./output)
 ```
 
 ## Contributing
