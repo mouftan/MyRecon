@@ -20,7 +20,7 @@ sudo chmod u+x install.sh
 ## Usage
 
 ```python
-Usage: ./MyRecon.sh [options]
+Usage: mr [options]
 
 Options:
   -h, --help              Display help information
