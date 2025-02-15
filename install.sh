@@ -4,6 +4,6 @@
 sudo cp MyRecon.sh /usr/bin/mr
 
 # Make the MyRecon file executable
-sudo chmod u+x /usr/bin/mr
+sudo chmod a+x /usr/bin/mr
 
 echo "MyRecon has been installed successfully! Now Enter the command 'mr' to run the tool."
