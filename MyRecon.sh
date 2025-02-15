@@ -4,16 +4,18 @@
 RED='\033[91m'
 GREEN='\033[92m'
 RESET='\033[0m'
+cp ../config.ini .
 
 # ASCII art
 echo -e "${RED}"
 cat << "EOF" 
- _      ____  _     _____ _____  ____  _     
-/ \__/|/  _ \/ \ /\/    //__ __\/  _ \/ \  /|
-| |\/||| / \|| | |||  __\  / \  | / \|| |\ ||
-| |  ||| \_/|| \_/|| |     | |  | |-||| | \||
-\_/  \|\____/\____/\_/     \_/  \_/ \|\_/  \|
-                                             
+   _____         __________                            
+  /     \ ___.__.\______   \ ____   ____  ____   ____  
+ /  \ /  <   |  | |       _// __ \_/ ___\/  _ \ /    \ 
+/    Y    \___  | |    |   \  ___/\  \__(  <_> )   |  \
+\____|__  / ____| |____|_  /\___  >\___  >____/|___|  /
+        \/\/             \/     \/     \/           \/ 
+                                       Tool By MoufTaN
 EOF
 echo -e "${RESET}"
 
@@ -107,25 +109,7 @@ collect_urls() {
         ~/go/bin/assetfinder "$target" --subs-only >> "$output_file"
     
         echo -e "${GREEN}Collecting SubDomains for $target...${RESET} using amass"
-        ~/go/bin/amass enum -d "$target" --passive -config ./config.ini >> "$output_file"
-    
-        echo -e "${GREEN}Collecting SubDomains for $target...${RESET} using assetfinder"
-        ~/go/bin/assetfinder "$target" --subs-only >> "$output_file"
-    
-        echo -e "${GREEN}Collecting SubDomains for $target...${RESET} using subfinder"
-        ~/go/bin/subfinder -d "$target" >> "$output_file"
-
-        echo -e "${GREEN}Collecting SubDomains for $target...${RESET} using amass"
-        ~/go/bin/amass enum -d "$target" --passive -config ./config.ini >> "$output_file"
-
-        echo -e "${GREEN}Collecting SubDomains for $target...${RESET} using  assetfinder"
-        ~/go/bin/assetfinder "$target" --subs-only >> "$output_file"
-
-        echo -e "${GREEN}Collecting SubDomains for $target...${RESET} using  subfinder"
-        ~/go/bin/subfinder -d "$target" >> "$output_file"
-
-        echo -e "${GREEN}Collecting SubDomains for $target...${RESET} using amass"
-        ~/go/bin/amass enum -d "$target" --passive -config ./config.ini >> "$output_file"
+        ~/go/bin/amass enum -d "$target" --passive -config ./config.ini "$target"  >> "$output_file"
         
     else
         echo -e "${RED}Skipping invalid target: $target${RESET}"
@@ -144,10 +128,10 @@ fi
 
 if [ -n "$domain" ]; then
     sort "$output_folder/domainSubs.txt" | uniq > "$output_folder/domainSubss.txt"
-    cat "$output_folder/domainSubss.txt" | ~/go/bin/httpx > "$output_folder/domainSubsLive.txt"
+    cat "$output_folder/domainSubss.txt" | httpx > "$output_folder/domainSubsLive.txt"
 elif [ -n "$filename" ]; then
     sort "$output_folder/all_raw.txt" | uniq > "$output_folder/domainSubss.txt"
-    cat "$output_folder/domainSubss.txt" | ~/go/bin/httpx > "$output_folder/domainSubsLive.txt"
+    cat "$output_folder/domainSubss.txt" | httpx > "$output_folder/domainSubsLive.txt"
 fi
 
 
