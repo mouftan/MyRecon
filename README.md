@@ -8,7 +8,7 @@ MyRecon is a Bash script for Subdomain Enumeration.
 git clone https://github.com/mouftan/MyRecon.git
 ```
 ```bash
-cd MyReco
+cd MyRecon
 ```
 ```bash
 sudo chmod u+x install.sh
