@@ -1,11 +1,8 @@
 # MyRecon
 
-# Foobar
-
 MyRecon is a Bash script for Subdomain Enumeration.
 
 ## Installation
-
 
 ```bash
 git clone https://github.com/mouftan/MyRecon.git
