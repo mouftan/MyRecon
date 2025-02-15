@@ -11,7 +11,7 @@ git clone https://github.com/mouftan/MyRecon.git
 cd MyRecon
 ```
 ```bash
-sudo chmod u+x install.sh
+sudo chmod +x install.sh
 ```
 ```bash
 ./install.sh
