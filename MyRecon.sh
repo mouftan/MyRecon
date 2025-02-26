@@ -53,6 +53,7 @@ check_prerequisite() {
 check_prerequisite "amass" "go install -v github.com/owasp-amass/amass/v3/...@master"
 check_prerequisite "subfinder" "go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest"
 check_prerequisite "assetfinder" "go install -v github.com/tomnomnom/assetfinder@latest"
+check_prerequisite "httpx" "go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest"
 
 
 # Parse command line arguments
