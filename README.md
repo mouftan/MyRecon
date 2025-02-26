@@ -4,25 +4,28 @@ MyRecon is a Bash script for Subdomain Enumeration.
 
 ## Installation
 
-# First, install the package
 
 ```bash
+# First, install the Go
 sudo apt install -y golang
 ```
 
-# Then add the following to your .bashrc
+
 ```bash
+# Then add the following to your .bashrc
 export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 ```
 
-# Reload your .bashrc
+
 ```bash
+# Reload your .bashrc
 source .bashrc
 ```
 
 ```bash
+# git clone:
 git clone https://github.com/mouftan/MyRecon.git
 ```
 
